@@ -2,7 +2,7 @@
 " Path設定
 if has('vim_starting')
     set runtimepath+=~/.vim/bundle/neobundle.vim/
-    call neobundle#rc(expand('~/.vim/bundle/'))
+    call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 
 " set filetype
@@ -246,7 +246,10 @@ imap <C-b> <C-e><Left>
 
 " ======便利キーバインド======
 " 改行のみ、キーソルはそのまま
-imap <C-j> <CR><Esc>k$a
+imap <C-j> <CR><Esc>k$a<CR>
 
 " =====末尾空白削除======
 autocmd BufWritePre * :%s/\s\+$//ge
+
+" End of NeoBundle
+call neobundle#end()
