@@ -9,6 +9,7 @@ endif
 autocmd bufnewfile,bufread *.jade set filetype=jade
 autocmd bufnewfile,bufread *.styl set filetype=stylus
 autocmd bufnewfile,bufread *.md set filetype=markdown
+autocmd bufnewfile,bufread *.go set filetype=go
 
 " ==============================
 " ======= Vim setting ==========
@@ -99,6 +100,13 @@ NeoBundle 'Simple-Javascript-Indenter'
 
 " c++
 NeoBundle 'vim-jp/cpp-vim'
+"NeoBundle 'kelan/gyp.vim'
+
+" python
+NeoBundle 'hdima/python-syntax'
+
+" golang
+NeoBundle 'fatih/vim-go'
 
 " ===== color setting =====
 " 構文ハイライトを有効
@@ -139,6 +147,8 @@ if has('vim_starting') &&  file_name == ""
   autocmd VimEnter * NERDTree /Users/A12708/project
 endif
 
+let NERDTreeWinSize=45
+
 " ======= neocomplcache setting =======
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -177,13 +187,27 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 " ===== syntastic =====
 " set syntastic jshint
 let g:syntastic_javascript_checker = "jshint"
-" let g:syntastic_javascript_jshint_conf = "~/.jshintrc"
+"let g:syntastic_javascript_jshint_conf = "~/.jshintrc"
 
 " ===== Simple javascript indenter =====
 " shiftwidthを1にしてインデント
 let g:SimpleJsIndenter_BriefMode = 1
 " switchのインデント調整
 let g:SimpleJsIndenter_CaseIndentLevel = -1
+
+
+
+" ==============================
+" ==========  golang  ==========
+" ==============================
+
+"let g:go_highlight_methods = 1
+"let g:go_highlight_interfaces = 1
+"let g:go_highlight_operators = 1
+"let g:go_highlight_build_constraints = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
 
 
 
