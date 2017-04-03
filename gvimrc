@@ -35,7 +35,7 @@ endif
 " ==================
 
 " ウィンドウサイズを指定
-set lines=90 columns=200
+set lines=95 columns=250
 " フォント
 set guifont=Monaco:h12
 " 透明度
